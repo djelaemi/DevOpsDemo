@@ -1,0 +1,123 @@
+{
+  "id": "d6493d1e-52fe-41d4-bc99-ab84d61235a8",
+  "version": "2.0",
+  "name": "DevOps",
+  "url": "https://en.wikipedia.org",
+  "tests": [{
+    "id": "7ed41d76-871e-46d0-a723-34217efa5200",
+    "name": "test3",
+    "commands": [{
+      "id": "c6d337c8-4320-4c31-9a70-45c0eaf18a2d",
+      "comment": "",
+      "command": "open",
+      "target": "/wiki/Main_Page",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "83740e77-7c09-45c7-bcf3-b230aa5f88ab",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1006x693",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a0b34134-f6a1-4ed1-a080-b044bce72ec9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.mw-ui-icon-search",
+      "targets": [
+        ["css=.mw-ui-icon-search", "css:finder"],
+        ["xpath=//div[@id='p-search']/a/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/a/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "70c0a2a0-7e94-457a-9731-934693c32357",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.cdx-search-input__end-button",
+      "targets": [
+        ["css=.cdx-search-input__end-button", "css:finder"],
+        ["xpath=//form[@id='searchform']/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Search')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "633805e0-2d1a-44b0-8747-50e67432d24b",
+      "comment": "",
+      "command": "type",
+      "target": "name=search",
+      "targets": [
+        ["name=search", "name"],
+        ["css=.cdx-text-input__input", "css:finder"],
+        ["xpath=//input[@name='search']", "xpath:attributes"],
+        ["xpath=//form[@id='searchform']/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/div/input", "xpath:position"]
+      ],
+      "value": "DevOps"
+    }, {
+      "id": "149c28b6-66da-4898-ae58-52ff2bae82a9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.cdx-button--action-default",
+      "targets": [
+        ["css=.cdx-button--action-default", "css:finder"],
+        ["xpath=//form[@id='searchform']/div/button", "xpath:idRelative"],
+        ["xpath=//form/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Search')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "18000d5d-f852-48f2-b0d7-9cbccccf3347",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.mw-page-title-main",
+      "targets": [
+        ["css=.mw-page-title-main", "css:finder"],
+        ["xpath=//h1[@id='firstHeading']/span", "xpath:idRelative"],
+        ["xpath=//h1/span", "xpath:position"],
+        ["xpath=//span[contains(.,'DevOps')]", "xpath:innerText"]
+      ],
+      "value": "DevOps"
+    }, {
+      "id": "b6f8dd81-8a19-45bd-986c-17693793050a",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=Definition",
+      "targets": [
+        ["id=Definition", "id"],
+        ["css=#Definition", "css:finder"],
+        ["xpath=//span[@id='Definition']", "xpath:attributes"],
+        ["xpath=//div[@id='mw-content-text']/div/h2/span", "xpath:idRelative"],
+        ["xpath=//h2/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Definition')]", "xpath:innerText"]
+      ],
+      "value": "Definition"
+    }, {
+      "id": "9d8479e7-ef2a-436a-831e-7903e56d7925",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=History",
+      "targets": [
+        ["id=History", "id"],
+        ["css=#History", "css:finder"],
+        ["xpath=//span[@id='History']", "xpath:attributes"],
+        ["xpath=//div[@id='mw-content-text']/div/h2[2]/span", "xpath:idRelative"],
+        ["xpath=//h2[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'History')]", "xpath:innerText"]
+      ],
+      "value": "Historia"
+    }]
+  }],
+  "suites": [{
+    "id": "ec1dda79-6c64-4a23-9ceb-63a9f746d2b7",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["7ed41d76-871e-46d0-a723-34217efa5200"]
+  }],
+  "urls": ["https://en.wikipedia.org/"],
+  "plugins": []
+}
