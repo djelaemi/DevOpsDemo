@@ -6,7 +6,7 @@ export class GuiModel {
             "title": "ZIZOU",
             "formList": [
                 {
-                    "id": "OwnUserForm",
+                    "id": 'OwnUserForm',
                     "title": "NotImplemented",
                     "formFieldList": [
                         {
