@@ -5,7 +5,7 @@ import java.util.List;
 
 public class PathListEntry<KeyType> {
 
-    private Key key;
+    private Key keyInstance;
     private String name;
     private String color;
     private String icon;
@@ -22,12 +22,12 @@ public class PathListEntry<KeyType> {
         this.active = true;
     }
 
-    public Key getKey() {
-        return key;
+    public Key getKeyInstance() {
+        return keyInstance;
     }
 
     public void setKey(KeyType key, String name) {
-        this.key = new Key(key, name);
+        this.keyInstance = new Key(key, name);
     }
 
     public String getName() {
@@ -128,17 +128,17 @@ public class PathListEntry<KeyType> {
 
     public class Key {
 
-        public Key(KeyType key, String name) {
+        public Key(KeyType keyValue, String name) {
             super();
-            this.key = key;
+            this.keyValue = keyValue;
             this.name = name;
         }
 
-        private KeyType key;
+        private KeyType keyValue;
         private String name;
 
-        public KeyType getKey() {
-            return key;
+        public KeyType getKeyValue() {
+            return keyValue;
         }
 
         public String getName() {
@@ -149,7 +149,7 @@ public class PathListEntry<KeyType> {
         public int hashCode() {
             final int prime = 31;
             int result = 1;
-            result = prime * result + ((key == null) ? 0 : key.hashCode());
+            result = prime * result + ((keyValue == null) ? 0 : keyValue.hashCode());
             result = prime * result + ((name == null) ? 0 : name.hashCode());
             return result;
         }
@@ -164,10 +164,10 @@ public class PathListEntry<KeyType> {
                 return false;
             @SuppressWarnings("unchecked")
             Key other = (Key) obj;
-            if (key == null) {
-                if (other.key != null)
+            if (keyValue == null) {
+                if (other.keyValue != null)
                     return false;
-            } else if (!key.equals(other.key))
+            } else if (!keyValue.equals(other.keyValue))
                 return false;
             if (name == null) {
                 if (other.name != null)
@@ -186,7 +186,7 @@ public class PathListEntry<KeyType> {
     public int hashCode() {
         final int prime = 31;
         int result = 1;
-        result = prime * result + ((key == null) ? 0 : key.hashCode());
+        result = prime * result + ((keyInstance == null) ? 0 : keyInstance.hashCode());
         return result;
     }
 
@@ -199,10 +199,10 @@ public class PathListEntry<KeyType> {
         if (getClass() != obj.getClass())
             return false;
         PathListEntry<?> other = (PathListEntry<?>) obj;
-        if (key == null) {
-            if (other.key != null)
+        if (keyInstance == null) {
+            if (other.keyInstance != null)
                 return false;
-        } else if (!key.equals(other.key))
+        } else if (!keyInstance.equals(other.keyInstance))
             return false;
         return true;
     }
